@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./css/loading.css">
   <link rel="stylesheet" href="./css/style.css">
   <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
+
 </head>
 
 <body>
@@ -27,7 +28,7 @@
           <li>
             <a href="#skill">Skill</a>
           </li>
-          <li class="menuTrigger active" >
+          <li class="menuTrigger" >
             <a href="#projects" id="project">Projects</a>
             <ul class="submenu" id="submenu">
               <li class="projectTrigger">Project1</li>
@@ -54,8 +55,8 @@
   <div class="banner">
     <div class="mask"></div>
   </div>
-  <main id="about">
-    <div class="userCard">
+  <main id="about" >
+    <div data-x class="userCard" id="about">
       <div class="pictureAndText clearfix">
         <div class="picture">
           <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
@@ -80,7 +81,7 @@
         </div>
       </div>
       <footer class="media">
-        <a href="#">
+        <a href="https://github.com/Lynnhan95" target="_blank">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
           </svg>
@@ -109,6 +110,7 @@
 
   </main>
   <section class="skills" id="skill">
+    <div data-x id="skill">
     <h2>技能</h2>
     <ol class="clearfix">
       <li>
@@ -160,8 +162,10 @@
         </div>
       </li>
     </ol>
+  </div>
   </section>
   <section class="portfolio" id="projects">
+    <div data-x id="projects">
     <h2>作品集</h2>
     <nav>
       <ol class="clearfix">
@@ -185,11 +189,15 @@
       </div>
       <div class="small" style="top: 312px; left: 645px;">
         <img src="./img/3.jpg" alt="作品3">
+
+      </div>
       </div>
     </div>
 
   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.js"></script>
   <script src="js/main.js"></script>
+  
 </body>
 
 </html>

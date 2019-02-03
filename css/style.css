@@ -92,6 +92,18 @@ h1,h2,h3,h4,h5,h6{
   background:#e06567;
   animation:hoverAni 0.2s linear;
 }
+.topNavBar nav > ul > li.active > a::after {
+  content:'';
+  display:block;
+  position:absolute;
+  width:100%;
+  top:100%;
+  left:0;
+  height:3px;
+  background:#e06567;
+  animation:hoverAni 0.2s linear;
+}
+
 @keyframes hoverAni{
   0%{
     width:0
@@ -380,4 +392,7 @@ section.portfolio .works{
 section.portfolio .works > .big,
 section.portfolio .works > .small {
   position: absolute;
+}
+[data-x].active{
+  outline:1px solid red;
 }

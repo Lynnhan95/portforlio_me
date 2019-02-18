@@ -12,6 +12,7 @@ window.onscroll = function(){
     let specialTags = document.querySelectorAll('div[data-x]')
     var minIndex = 0
 // console.log(specialTags)
+
 for(let i =0; i< specialTags.length;i++){
     specialTags[i].classList.remove('active')
 }
@@ -103,14 +104,29 @@ var tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'
     }
 }
 
+console.log(Swiper)
+var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  })
 
 
-portfolio1.onclick= function(){
-  portfolioBar.className = 'bar state-1'
-}
-portfolio2.onclick= function(){
-  portfolioBar.className = 'bar state-2'
-}
-portfolio3.onclick= function(){
-  portfolioBar.className = 'bar state-3'
-}
+
+

@@ -5,8 +5,11 @@
   <title>Han's Portfolio</title>
   <link rel="stylesheet" href="./css/loading.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
   <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
+<script>
 
+</script>
 </head>
 
 <body>
@@ -164,38 +167,55 @@
     </ol>
   </div>
   </section>
-  <section class="portfolio" id="projects">
+  <section class="portfolio" id="projects" data-x>
     <div data-x id="projects">
     <h2>作品集</h2>
     <nav>
-      <ol class="clearfix">
-        <li id="portfolio1">所有</li>
-        <li id="portfolio2">框架</li>
-        <li id="portfolio3">原生JS&amp;CSS</li>
-      </ol>
-      <div id="portfolioBar" class="bar state-1">
-        <div class="bar-inner"></div>
+        <ol class="clearfix">
+          <li id="portfolio1">所有</li>
+          <li id="portfolio2">框架</li>
+          <li id="portfolio3">原生JS&amp;CSS</li>
+        </ol>
+        <div id="portfolioBar" class="bar state-1">
+          <div class="bar-inner"></div>
+        </div>
+      </nav>
+  
+      <!-- swiper -->
+      <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+      
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      
       </div>
-    </nav>
-   
-
-
-    <div class="works" style="height: 597px;">
-      <div class="big" style="top: 0; left: 0;">
-        <img src="./img/1.jpg" alt="作品1">
-      </div>
-      <div class="small" style="top: 0; left: 645px;">
-        <img src="./img/2.jpg" alt="作品2">
-      </div>
-      <div class="small" style="top: 312px; left: 645px;">
-        <img src="./img/3.jpg" alt="作品3">
-
-      </div>
-      </div>
-    </div>
 
   </section>
+<script>
+
+  portfolio1.onclick= function(){
+    console.log('1')
+    portfolioBar.className = 'bar state-1'
+  }
+  portfolio2.onclick= function(){
+    portfolioBar.className = 'bar state-2'
+  }
+  portfolio3.onclick= function(){
+    portfolioBar.className = 'bar state-3'
+  }
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.3.0/Tween.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
   <script src="js/main.js"></script>
   
 </body>
